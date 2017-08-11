@@ -15,9 +15,11 @@ public class Dollars {
         double numTenCents = Math.round((numDollars/0.1) - (numDollars%1));
         System.out.println(numDollars + " Dollars, equals" + "\n" + numTenCents + " Ten Cents");
         numDollars = numDollars - (numTenCents*0.1);
-        System.out.println(numDollars);
         double numFiveCents = Math.round((numDollars/0.05) - (numDollars%0.5));
         System.out.println(numDollars + " Dollars, equals" + "\n" + numFiveCents + " Five Cents");
+        numDollars = numDollars - (numTenCents*0.05);
+        double numOneCent = Math.round((numDollars/0.01) - (numDollars%0.1));
+        System.out.println(numDollars + " Dollars, equals" + "\n" + numOneCent + " One Cents");
 
 
     }

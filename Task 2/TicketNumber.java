@@ -6,13 +6,11 @@ import java.util.Scanner;
 public class TicketNumber {
     public static void main(String[] args){
         Scanner userInput = new Scanner( System.in );
-        String ticketNum;
+        int ticketNum;
         System.out.println("please enter ticket number: ");
-        ticketNum = userInput.next();
-        String lastTicketNum = ticketNum.substring(5,6);
-        String newTicketNum = ticketNum.substring(0,5);
-        int lastTicketNumInt = Integer.parseInt(lastTicketNum);
-        int newTicketNumInt = Integer.parseInt(newTicketNum);
+        ticketNum = userInput.nextInt();
+        int lastTicketNumInt = ticketNum%10;
+        int newTicketNumInt = ticketNum/10;
         boolean result = (newTicketNumInt%7) == lastTicketNumInt;
         System.out.println(result);
 
